@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sendTweetActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edtSendTweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Send a Tweet ..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnSendTweet"
+        />
+
+    <Button
+        android:id="@+id/btnSendTweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="63dp"
+        android:background="@android:color/holo_blue_bright"
+        android:onClick="sendTweetActivity"
+        android:text="Send Tweet"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSendTweet" />
+
+    <Button
+        android:id="@+id/btnViewTweets"
+        android:layout_width="316dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="53dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="View Other User's Tweets"
+        android:textColor="@android:color/holo_blue_bright"
+        app:layout_constraintBottom_toTopOf="@+id/viewTweetsListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendTweet" />
+
+    <ListView
+        android:id="@+id/viewTweetsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewTweets" />
+</LinearLayout>
